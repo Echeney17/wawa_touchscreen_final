@@ -16,8 +16,30 @@
         <ListBox x:Name="Items" HorizontalAlignment="Left" Height="121" Margin="646,30,0,0" VerticalAlignment="Top" Width="125" SelectionChanged="ListBox_SelectionChanged"/>
         <Label x:Name="Items_Label" Content="Items Selected&#xD;&#xA;" HorizontalAlignment="Left" Margin="646,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" Foreground="#FFB61E1E"/>
         <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Content="Touch the screen to begin ordering" HorizontalAlignment="Left" Margin="206,140,0,0" VerticalAlignment="Top" Width="366" Height="54" FontSize="20" FontWeight="Bold" AutomationProperties.IsColumnHeader="True" Grid.Row="1"/>
         <Button x:Name="confirm" Content="Confirm" HorizontalAlignment="Left" Margin="622,198,0,0" VerticalAlignment="Top" Width="75" Background="#FF94E0A0" FontWeight="Bold" Click="confirm_Click" Grid.RowSpan="2"/>
         <Button x:Name="cancel" Content="Cancel" HorizontalAlignment="Left" Margin="709,198,0,0" VerticalAlignment="Top" Width="75" Background="#FFEA8888" Grid.RowSpan="2"/>
+        <Button x:Name="Touch" Content="Touch the Screen to begin odrering" HorizontalAlignment="Left" Margin="86,118,0,0" VerticalAlignment="Top" Width="533" Height="235" RenderTransformOrigin="0.5,0.5" Click="Touch_Click" Opacity="0" Grid.RowSpan="2">
+            <Button.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0.01"/>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.207"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Label Content="Touch the Screen to begin ordering" HorizontalAlignment="Left" Margin="214,98.6,0,0" Grid.Row="1" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
     </Grid>
 </Window>
