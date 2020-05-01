@@ -1,90 +1,44 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-namespace Wawa_Touchscreen
-{
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
-    {
-        public MainWindow()
-        {
-            InitializeComponent();
-            if (Items.Items.Count == 0)
-            {
-                confirm.Visibility = Visibility.Hidden;
-                cancel.Visibility = Visibility.Hidden;
-                Items_Label.Visibility = Visibility.Hidden;
-                Items.Visibility = Visibility.Hidden;
-            }
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Sandwiches san1 = new Sandwiches();
-            san1.Show();
-        }
-
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Beverages beverages = new Beverages();
-            beverages.Show();
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            Breakfast breakfast = new Breakfast();
-            breakfast.Show();
-        }
-
-        private void Button_Click_3(object sender, RoutedEventArgs e)
-        {
-            Sandwiches san1 = new Sandwiches();
-            san1.Show();
-        }
-
-        private void Touch_Click(object sender, RoutedEventArgs e)
-        {
-            Breakfast breakfast = new Breakfast();
-            breakfast.Show();
-            this.Visibility = Visibility.Hidden;
-        }
-
-        private void ListBoxItem_Selected_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void confirm_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Total price is $ " + Items.Items.Count + 1 * 2);
-        }
-
-        private void cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
-        }
-    }
-}
+<Window x:Class="Wawa_Touchscreen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wawa_Touchscreen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Image Source="Image1.png" Stretch="Fill" Opacity="0.3" OpacityMask="Black"/>
+        <TextBox HorizontalAlignment="Left" Height="54" Margin="657,365,0,0" TextWrapping="Wrap" Text="Evan Cheney&#xA;Jason Reilly&#xA;Chi Lai" VerticalAlignment="Top" Width="135"/>
+        <ListBox x:Name="Items" HorizontalAlignment="Left" Height="121" Margin="646,30,0,0" VerticalAlignment="Top" Width="125" SelectionChanged="ListBox_SelectionChanged">
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+            <ListBoxItem x:Name="___No_Name_" Content="" Selected="ListBoxItem_Selected"/>
+        </ListBox>
+        <Label x:Name="Items_Label" Content="Items Selected&#xD;&#xA;" HorizontalAlignment="Left" Margin="656,4,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial Black" Foreground="#FFB61E1E"/>
+        <Label Content="" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Touch the screen to order" HorizontalAlignment="Left" Margin="256,296,0,0" VerticalAlignment="Top" Width="325" Height="54" FontSize="20" FontWeight="Bold" AutomationProperties.IsColumnHeader="True"/>
+        <Button x:Name="Touch" Content="" HorizontalAlignment="Left" Margin="66,53,0,0" VerticalAlignment="Top" Width="553" Height="346" RenderTransformOrigin="0.5,0.5" Click="Touch_Click" Opacity="0">
+            <Button.OpacityMask>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.OpacityMask>
+            <Button.Background>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Background>
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0.01"/>
+            </Button.BorderBrush>
+            <Button.Foreground>
+                <SolidColorBrush Color="Black" Opacity="0"/>
+            </Button.Foreground>
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.207"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+    </Grid>
+</Window>
