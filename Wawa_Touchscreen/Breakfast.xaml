@@ -1,0 +1,57 @@
+<Window x:Class="Wawa_Touchscreen.Breakfast"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wawa_Touchscreen"
+        mc:Ignorable="d"
+        Title="Breakfast" Height="450" Width="800">
+    <Grid x:Name="BreakfastWindow" Background="#FFFAF6F1">
+        <Button x:Name="btnBreakfastBurrito" Content="" HorizontalAlignment="Left" Margin="6,113,0,0" VerticalAlignment="Top" Width="154" Height="104" Click="btnBreakfastBurrito_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image20.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnOatmeal" Content="" HorizontalAlignment="Left" Margin="196,113,0,0" VerticalAlignment="Top" Width="146" Height="104" Click="btnOatmeal_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image21.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBreakfastBowl" Content="" HorizontalAlignment="Left" Margin="388,113,0,0" VerticalAlignment="Top" Width="129" Height="104" Click="btnBreakfastBowl_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image22.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBreakfastBagel" Content="" HorizontalAlignment="Left" Margin="195,272,0,0" VerticalAlignment="Top" Width="147" Height="107" Click="btnBreakfastBagel_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image24.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBreakfastCroissant" Content="" HorizontalAlignment="Left" Margin="382,272,0,0" VerticalAlignment="Top" Width="135" Height="107" Click="btnBreakfastCroissant_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image25.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBreakfastWaffleSandwich" Content="" HorizontalAlignment="Left" Margin="6,272,0,0" VerticalAlignment="Top" Width="154" Height="107" Click="btnBreakfastWaffleSandwich_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image23.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="lblMakeASelection" Content="Make A Selection" HorizontalAlignment="Left" Margin="195,30,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="lblBreakfastBurrito" Content="Breakfast Burrito" HorizontalAlignment="Left" Margin="23,217,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFB61E1E"/>
+        <Label x:Name="lblOatmeal" Content="Oatmeal" HorizontalAlignment="Left" Margin="236,217,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
+        <Label x:Name="lblBreakfastBowl" Content="Breakfast Bowl" HorizontalAlignment="Left" Margin="398,217,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
+        <Label x:Name="lblBreakfastWaffleSandwich" Content="Waffle Sandwich" HorizontalAlignment="Left" Margin="23,379,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
+        <Label x:Name="lblBreakfastBagel" Content="Breakfast Bagel" HorizontalAlignment="Left" Margin="208,380,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
+        <Label x:Name="lblBreakfastCroissant" Content="Breakfast Croissant" HorizontalAlignment="Left" Margin="376,379,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
+        <ListBox x:Name="ltbOrderItems" HorizontalAlignment="Left" Height="221" Margin="604,113,0,0" VerticalAlignment="Top" Width="144">
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+        </ListBox>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="639,380,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_2"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="639,30,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Wawa_Touchscreen.Finished"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wawa_Touchscreen"
+        mc:Ignorable="d"
+        Title="Finished" Height="450" Width="800">
+    <Grid>
+        <Image Source="Image1.png" Stretch="Fill" Opacity="0.3" OpacityMask="Black"/>
+        <Label x:Name="lblColdBeverages" Content="Thank You For Ordering! &#xD;&#xA;You Are Order Number:" HorizontalAlignment="Left" Margin="56,47,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="327"/>
+        <Label x:Name="lblColdBeverages_Copy" Content="001" HorizontalAlignment="Left" Margin="361,59,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="327"/>
+        <ListBox HorizontalAlignment="Left" Height="183" Margin="56,144,0,0" VerticalAlignment="Top" Width="161" SelectionChanged="ListBox_SelectionChanged"/>
+
+    </Grid>
+</Window>
