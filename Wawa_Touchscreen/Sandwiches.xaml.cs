@@ -81,7 +81,7 @@ namespace Wawa_Touchscreen
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-           // Item1.Items.Add(Breakfast.passingText);
+            Item1.Items.Add(Breakfast.passingText);
         }
     }
 }
