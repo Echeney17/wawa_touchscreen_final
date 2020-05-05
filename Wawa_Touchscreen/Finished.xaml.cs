@@ -19,14 +19,47 @@ namespace Wawa_Touchscreen
     /// </summary>
     public partial class Finished : Window
     {
+        string[] chosenItems;
+
         public Finished()
         {
             InitializeComponent();
         }
 
+        public void setCList(string[] inChosenItems)
+        {
+            chosenItems = inChosenItems;
+            foreach (var item in chosenItems)
+            {
+                finLstBox.Items.Add(item);
+            }
+        }
+
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            double total = 0;
 
+            foreach (var item in finLstBox.Items)
+            {
+                if (item.ToString() == "Burrito")
+                {
+                    total = total + 5.99;
+                }
+                MessageBox.Show(chosenItems.ToString());
+            }
+        }
+
+        public void CalculateTotal ()
+        {
+        }
+
+        private void finishCancel_Click(object sender, RoutedEventArgs e)
+        {
+            string[] clist = finLstBox.Items.OfType<string>().ToArray();
+            Beverages beverages = new Beverages();
+            beverages.Show();
+            beverages.setCList(clist);
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

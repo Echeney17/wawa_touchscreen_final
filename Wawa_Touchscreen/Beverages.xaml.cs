@@ -19,9 +19,20 @@ namespace Wawa_Touchscreen
     /// </summary>
     public partial class Beverages : Window
     {
+        string[] chosenItems;
+
         public Beverages()
         {
             InitializeComponent();
+        }
+
+        public void setCList(string[] inChosenItems)
+        {
+            chosenItems = inChosenItems;
+            foreach (var item in chosenItems)
+            {
+                ltbOrderItems.Items.Add(item);
+            }
         }
 
         private void btnFruitSmoothies_Click(object sender, RoutedEventArgs e)
@@ -31,37 +42,35 @@ namespace Wawa_Touchscreen
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ltbOrderItems.Items.Add("Fruit Smoothies");
+            ltbOrderItems.Items.Add("Fruit Smoothies ... $3.50");
         }
 
         private void btnChaiTeas_Click(object sender, RoutedEventArgs e)
         {
-            ltbOrderItems.Items.Add("Chai Teas");
+            ltbOrderItems.Items.Add("Chai Teas ... $3.25");
         }
 
         private void btnLattes_Click(object sender, RoutedEventArgs e)
         {
-            ltbOrderItems.Items.Add("Lattes");
+            ltbOrderItems.Items.Add("Lattes ... $3.99");
         }
 
         private void btnHotChocolates_Click(object sender, RoutedEventArgs e)
         {
-            ltbOrderItems.Items.Add("Hot Chocolates");
+            ltbOrderItems.Items.Add("Hot Chocolates ... $1.99");
         }
 
         private void btnMacchiatos_Click(object sender, RoutedEventArgs e)
         {
-            ltbOrderItems.Items.Add("Macchiatos");
+            ltbOrderItems.Items.Add("Macchiatos ... $2.99");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-           string s1 = ltbOrderItems.SelectedItems.ToString();
-            
-           
-            passingText = s1;
+            string[] clist = ltbOrderItems.Items.OfType<string>().ToArray();
             Sandwiches san1 = new Sandwiches();
             san1.Show();
+            san1.setCList(clist);
             this.Visibility = Visibility.Hidden;
         }
 
@@ -72,13 +81,15 @@ namespace Wawa_Touchscreen
 
         private void btnCreamSmoothies_Click(object sender, RoutedEventArgs e)
         {
-            ltbOrderItems.Items.Add("Cream Smoothies");
+            ltbOrderItems.Items.Add("Cream Smoothies ... $2.50");
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            string[] clist = ltbOrderItems.Items.OfType<string>().ToArray();
             Finished Finished = new Finished();
             Finished.Show();
+            Finished.setCList(clist);
             this.Visibility = Visibility.Hidden;
         }
     }

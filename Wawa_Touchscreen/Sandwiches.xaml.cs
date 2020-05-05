@@ -19,9 +19,20 @@ namespace Wawa_Touchscreen
     /// </summary>
     public partial class Sandwiches : Window
     {
+        string[] chosenItems;
+
         public Sandwiches()
         {
             InitializeComponent();
+        }
+
+        public void setCList(string[] inChosenItems)
+        { 
+            chosenItems = inChosenItems;
+            foreach (var item in chosenItems)
+            {
+                Item1.Items.Add(item);
+            }
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -37,51 +48,50 @@ namespace Wawa_Touchscreen
 
         private void Sourdough_Sandwich_Click(object sender, RoutedEventArgs e)
         {
-            Item1.Items.Add("Sourdough Sandwich");
+            Item1.Items.Add("Sourdough Sandwich ... $5.99");
         }
 
         private void Flatbread_Click(object sender, RoutedEventArgs e)
         {
-            Item1.Items.Add("Flatbread");
+            Item1.Items.Add("Flatbread ... $4.99");
         }
 
         private void Roasted_Chicken_Click(object sender, RoutedEventArgs e)
         {
-            Item1.Items.Add("Roasted Chicken");
+            Item1.Items.Add("Roasted Chicken ... $3.50");
         }
 
         private void Quesedilla_Click(object sender, RoutedEventArgs e)
         {
-            Item1.Items.Add("Quesedilla");
+            Item1.Items.Add("Quesedilla ... $5.99");
         }
 
         private void Burrito_Click(object sender, RoutedEventArgs e)
         {
-            Item1.Items.Add("Burroto");
+            Item1.Items.Add("Burrito ... $4.75");
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            string[] clist = Item1.Items.OfType<string>().ToArray();
             Beverages beverages = new Beverages();
             beverages.Show();
+            beverages.setCList(clist);
             this.Visibility = Visibility.Hidden;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            string[] clist = Item1.Items.OfType<string>().ToArray();
             Breakfast bre = new Breakfast();
             bre.Show();
+            bre.setCList(clist);
             this.Visibility = Visibility.Hidden;
         }
 
         private void Hoagies_Click(object sender, RoutedEventArgs e)
         {
-            Item1.Items.Add("Hoagies");
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            Item1.Items.Add(Breakfast.passingText);
+            Item1.Items.Add("Hoagies ... $4.99");
         }
     }
 }

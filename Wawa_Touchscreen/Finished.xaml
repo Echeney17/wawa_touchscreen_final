@@ -10,7 +10,9 @@
         <Image Source="Image1.png" Stretch="Fill" Opacity="0.3" OpacityMask="Black"/>
         <Label x:Name="lblColdBeverages" Content="Thank You For Ordering! &#xD;&#xA;You Are Order Number:" HorizontalAlignment="Left" Margin="56,47,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="327"/>
         <Label x:Name="lblColdBeverages_Copy" Content="001" HorizontalAlignment="Left" Margin="361,59,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="327"/>
-        <ListBox HorizontalAlignment="Left" Height="183" Margin="56,144,0,0" VerticalAlignment="Top" Width="161" SelectionChanged="ListBox_SelectionChanged"/>
+        <ListBox x:Name="finLstBox" HorizontalAlignment="Left" Height="183" Margin="56,144,0,0" VerticalAlignment="Top" Width="161" SelectionChanged="ListBox_SelectionChanged"/>
+        <Button x:Name="finishCancel" Content="Cancel" HorizontalAlignment="Left" Margin="56,351,0,0" VerticalAlignment="Top" Width="75" Click="finishCancel_Click"/>
+        <Button Content="Confirm" HorizontalAlignment="Left" Margin="142,351,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
