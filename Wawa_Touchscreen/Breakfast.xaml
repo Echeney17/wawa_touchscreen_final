@@ -51,7 +51,8 @@
             <ListBoxItem Content=""/>
         </ListBox>
         <Button Content="Back" HorizontalAlignment="Left" Margin="639,380,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_2"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="639,30,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="622,30,0,0" VerticalAlignment="Top" Width="113" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Content="Remove Item" HorizontalAlignment="Left" Margin="622,75,0,0" VerticalAlignment="Top" Width="113" FontWeight="Bold" Click="Remove_Click"/>
 
     </Grid>
 </Window>

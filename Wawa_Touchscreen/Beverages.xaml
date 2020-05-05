@@ -13,7 +13,7 @@
         <Label x:Name="lblLattes" Content="Lattes" HorizontalAlignment="Left" Margin="35,385,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
         <Label x:Name="lblHotChocolates" Content="Hot Chocolates" HorizontalAlignment="Left" Margin="206,385,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFB61E1E"/>
         <Label x:Name="lblMacchiatos" Content="Macchiatos" HorizontalAlignment="Left" Margin="427,385,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontFamily="Arial Black"/>
-        <ListBox x:Name="ltbOrderItems" HorizontalAlignment="Left" Height="251" Margin="636,81,0,0" VerticalAlignment="Top" Width="126" SelectionChanged="ltbOrderItems_SelectionChanged">
+        <ListBox x:Name="ltbOrderItems" HorizontalAlignment="Left" Height="233" Margin="636,111,0,0" VerticalAlignment="Top" Width="126" SelectionChanged="ltbOrderItems_SelectionChanged">
             <ListBoxItem x:Name="lblMangoSmoothie" Content=""/>
             <ListBoxItem x:Name="lblIcedCoffee" Content=""/>
             <ListBoxItem x:Name="lblRoastBeefSandwich" Content=""/>
@@ -51,8 +51,9 @@
                 <ImageBrush ImageSource="Image19.png"/>
             </Button.Background>
         </Button>
-        <Button Content="Check order" HorizontalAlignment="Left" Margin="660,35,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_2"/>
+        <Button Content="Check order" HorizontalAlignment="Left" Margin="636,35,0,0" VerticalAlignment="Top" Width="126" FontWeight="Bold" Click="Button_Click_2"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="660,365,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_1"/>
+        <Button Content="Remove Item" HorizontalAlignment="Left" Margin="636,74,0,0" VerticalAlignment="Top" Width="126" FontWeight="Bold" Click="Remove_Click" Height="22"/>
 
     </Grid>
 </Window>

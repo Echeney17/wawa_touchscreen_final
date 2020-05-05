@@ -36,7 +36,7 @@
             </Button.Background>
         </Button>
         <Label Content="Quesedilla&#xD;&#xA;" HorizontalAlignment="Left" Margin="59,329,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontWeight="Bold"/>
-        <ListBox x:Name="Item1" HorizontalAlignment="Left" Height="251" Margin="323.297,73,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="ListBox_SelectionChanged" Grid.Column="1">
+        <ListBox x:Name="Item1" HorizontalAlignment="Left" Height="226" Margin="323.333,98,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="ListBox_SelectionChanged" Grid.Column="1">
             <ListBoxItem Content=""/>
             <ListBoxItem Content=""/>
             <ListBoxItem Content=""/>
@@ -54,7 +54,8 @@
             </Button.Background>
         </Button>
         <Label Content="Hoagies" HorizontalAlignment="Left" Margin="206.297,329,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.501,0.278" Foreground="#FFB61E1E" FontWeight="Bold" Grid.Column="1"/>
-        <Button Content="Next" HorizontalAlignment="Left" Margin="356,25,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_1" Grid.Column="1"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="341.333,25,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold" Click="Button_Click_1" Grid.Column="1"/>
+        <Button Content="Remove Item" HorizontalAlignment="Left" Margin="341.333,58,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold" Click="Remove_Click" Grid.Column="1"/>
         <Button Content="Back" HorizontalAlignment="Left" Margin="356,351,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_2" Grid.Column="1"/>
 
     </Grid>

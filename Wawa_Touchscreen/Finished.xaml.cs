@@ -20,11 +20,14 @@ namespace Wawa_Touchscreen
     public partial class Finished : Window
     {
         string[] chosenItems;
+        double total;
 
         public Finished()
         {
             InitializeComponent();
         }
+
+        public void setTotal(double inTotal) { inTotal = total; }
 
         public void setCList(string[] inChosenItems)
         {
@@ -37,21 +40,9 @@ namespace Wawa_Touchscreen
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            double total = 0;
-
-            foreach (var item in finLstBox.Items)
-            {
-                if (item.ToString() == "Burrito")
-                {
-                    total = total + 5.99;
-                }
-                MessageBox.Show(chosenItems.ToString());
-            }
+    
         }
 
-        public void CalculateTotal ()
-        {
-        }
 
         private void finishCancel_Click(object sender, RoutedEventArgs e)
         {
@@ -59,7 +50,16 @@ namespace Wawa_Touchscreen
             Beverages beverages = new Beverages();
             beverages.Show();
             beverages.setCList(clist);
+            beverages.setTotal(total);
             this.Visibility = Visibility.Hidden;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            finConfirmation.Content = "Thank You For Ordering!";
+            lblColdBeverages_Copy.Content = "Your order number is 001";
+            totalIs.Content = "Your total is:";
+            totalnumber.Content = total.ToString();
         }
     }
 }

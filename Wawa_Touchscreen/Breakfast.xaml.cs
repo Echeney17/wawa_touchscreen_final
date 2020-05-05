@@ -20,6 +20,9 @@ namespace Wawa_Touchscreen
     public partial class Breakfast : Window
     {
         string[] chosenItems;
+        double total;
+
+        public void setTotal(double inTotal) { inTotal = total; }
 
         public void setCList(string[] inChosenItems)
         {
@@ -42,26 +45,31 @@ namespace Wawa_Touchscreen
         private void btnOatmeal_Click(object sender, RoutedEventArgs e)
         {
             ltbOrderItems.Items.Add("Oatmeal ... $1.99");
+            total = total + 1.99;
         }
 
         private void btnBreakfastBurrito_Click(object sender, RoutedEventArgs e)
         {
             ltbOrderItems.Items.Add("Breakfast Burrito ... $2.99");
+            total = total + 2.99;
         }
 
         private void btnBreakfastBowl_Click(object sender, RoutedEventArgs e)
         {
             ltbOrderItems.Items.Add("Breakfast Bowl ... $3.99");
+            total = total + 3.99;
         }
 
         private void btnBreakfastWaffleSandwich_Click(object sender, RoutedEventArgs e)
         {
             ltbOrderItems.Items.Add("Breakfast Waffle Sandwich ... $3.75");
+            total = total + 3.75;
         }
 
         private void btnBreakfastCroissant_Click(object sender, RoutedEventArgs e)
         {
             ltbOrderItems.Items.Add("Breakfast Croissant ... $2.99");
+            total = total + 2.99;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -70,6 +78,7 @@ namespace Wawa_Touchscreen
             Sandwiches san1 = new Sandwiches();
             san1.Show();
             san1.setCList(clist);
+            san1.setTotal(total);
             this.Visibility = Visibility.Hidden;
 
         }
@@ -84,6 +93,12 @@ namespace Wawa_Touchscreen
         private void btnBreakfastBagel_Click(object sender, RoutedEventArgs e)
         {
             ltbOrderItems.Items.Add("Breakfast Bagel ... $2.25");
+            total = total + 2.25;
+        }
+
+        private void Remove_Click(object sender, RoutedEventArgs e)
+        {
+            ltbOrderItems.Items.Remove(ltbOrderItems.SelectedItem);
         }
     }
 }
