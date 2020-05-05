@@ -27,7 +27,7 @@ namespace Wawa_Touchscreen
             InitializeComponent();
         }
 
-        public void setTotal(double inTotal) { inTotal = total; }
+        public void setTotal(double inTotal) { total = inTotal; }
 
         public void setCList(string[] inChosenItems)
         {
@@ -59,7 +59,7 @@ namespace Wawa_Touchscreen
             finConfirmation.Content = "Thank You For Ordering!";
             lblColdBeverages_Copy.Content = "Your order number is 001";
             totalIs.Content = "Your total is:";
-            totalnumber.Content = total.ToString();
+            totalnumber.Content = "$ " + total.ToString();
         }
     }
 }

@@ -36,7 +36,7 @@ namespace Wawa_Touchscreen
             }
         }
 
-        public void setTotal(double inTotal) { inTotal = total; }
+        public void setTotal(double inTotal) { total = inTotal; }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -81,6 +81,7 @@ namespace Wawa_Touchscreen
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(total.ToString());
             string[] clist = Item1.Items.OfType<string>().ToArray();
             Beverages beverages = new Beverages();
             beverages.Show();

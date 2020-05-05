@@ -22,7 +22,7 @@ namespace Wawa_Touchscreen
         string[] chosenItems;
         double total;
 
-        public void setTotal(double inTotal) { inTotal = total; }
+        public void setTotal(double inTotal) { total = inTotal; }
 
         public void setCList(string[] inChosenItems)
         {
@@ -74,6 +74,7 @@ namespace Wawa_Touchscreen
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(total.ToString());
             string[] clist = ltbOrderItems.Items.OfType<string>().ToArray();       
             Sandwiches san1 = new Sandwiches();
             san1.Show();

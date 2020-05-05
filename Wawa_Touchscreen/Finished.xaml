@@ -8,13 +8,13 @@
         Title="Finished" Height="450" Width="800">
     <Grid>
         <Image Source="Image1.png" Stretch="Fill" Opacity="0.3" OpacityMask="Black"/>
-        <Label x:Name="finConfirmation" Content="Would you like to confirm &#xD;&#xA; your order? " HorizontalAlignment="Left" Margin="56,47,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="300"/>
+        <Label x:Name="finConfirmation" Content="Would you like to confirm &#xA;your order? " HorizontalAlignment="Left" Margin="56,47,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="300"/>
         <Label x:Name="lblColdBeverages_Copy" Content="" HorizontalAlignment="Left" Margin="56,106,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="20" Width="327"/>
         <ListBox x:Name="finLstBox" HorizontalAlignment="Left" Height="183" Margin="56,144,0,0" VerticalAlignment="Top" Width="161" SelectionChanged="ListBox_SelectionChanged"/>
         <Button x:Name="finishCancel" Content="Previous" HorizontalAlignment="Left" Margin="56,351,0,0" VerticalAlignment="Top" Width="75" Click="finishCancel_Click"/>
         <Button Content="Confirm" HorizontalAlignment="Left" Margin="142,351,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Label x:Name="totalIs" Content="" HorizontalAlignment="Left" Margin="236,144,0,0" VerticalAlignment="Top" Height="43" Width="134" FontFamily="Arial Black" FontSize="20"/>
-        <Label x:Name="totalnumber" Content="" HorizontalAlignment="Left" Margin="236,203,0,0" VerticalAlignment="Top" Height="43" Width="134" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="totalIs" Content="" HorizontalAlignment="Left" Margin="236,144,0,0" VerticalAlignment="Top" Height="43" Width="163.26" FontFamily="Arial Black" FontSize="20"/>
+        <Label x:Name="totalnumber" Content="" HorizontalAlignment="Left" Margin="236,203,0,0" VerticalAlignment="Top" Height="43" Width="163.26" FontFamily="Arial Black" FontSize="20"/>
 
     </Grid>
 </Window>
