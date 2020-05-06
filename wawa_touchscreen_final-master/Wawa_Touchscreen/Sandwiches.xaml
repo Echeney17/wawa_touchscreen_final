@@ -1,0 +1,62 @@
+<Window x:Class="Wawa_Touchscreen.Sandwiches"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wawa_Touchscreen"
+        mc:Ignorable="d"
+        Title="Sandwiches" Height="450" Width="800">
+    <Grid Background="#FFFAF6F1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="325*"/>
+            <ColumnDefinition Width="469*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="&#x9;&#x9;Make A Selection" HorizontalAlignment="Left" Margin="124,25,0,0" VerticalAlignment="Top" Width="513" FontFamily="Arial Black" FontSize="20" Grid.ColumnSpan="2"/>
+        <Button x:Name="Sourdough_Sandwich" Content="" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="168" Height="89" Click="Sourdough_Sandwich_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image3.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="Sourdough" Content="Sourdough&#xD;&#xA;" HorizontalAlignment="Left" Margin="52,167,0,0" VerticalAlignment="Top" FontFamily="Arial Black" Foreground="#FFB61E1E"/>
+        <Button x:Name="Flatbread" Content="" HorizontalAlignment="Left" Margin="238,73,0,0" VerticalAlignment="Top" Width="177" Height="87" Click="Flatbread_Click" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="Image4.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Flatbread" HorizontalAlignment="Left" Margin="293,165,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.497,0.122" Width="69" Foreground="#FFB61E1E" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="Roasted_Chicken" Content="" HorizontalAlignment="Left" Margin="152.297,73,0,0" VerticalAlignment="Top" Width="161" Height="87" Click="Roasted_Chicken_Click" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="Image5.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Roasted Chicken&#xD;&#xA;" HorizontalAlignment="Left" Margin="182.297,167,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.092,0.211" Foreground="#FFB61E1E" FontWeight="Bold" Grid.Column="1"/>
+        <Button x:Name="Quesedilla" Content="" HorizontalAlignment="Left" Margin="10,246,0,0" VerticalAlignment="Top" Width="168" Height="78" Click="Quesedilla_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Image6.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Quesedilla&#xD;&#xA;" HorizontalAlignment="Left" Margin="59,329,0,0" VerticalAlignment="Top" Foreground="#FFB61E1E" FontWeight="Bold"/>
+        <ListBox x:Name="Item1" HorizontalAlignment="Left" Height="226" Margin="323.333,98,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="ListBox_SelectionChanged" Grid.Column="1">
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+            <ListBoxItem Content=""/>
+        </ListBox>
+        <Button x:Name="Burrito" Content="" HorizontalAlignment="Left" Margin="238,246,0,0" VerticalAlignment="Top" Width="177" Height="78" Click="Burrito_Click" Grid.ColumnSpan="2">
+            <Button.Background>
+                <ImageBrush ImageSource="Image7.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Burrito&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="305,329,0,0" Foreground="#FFB61E1E" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Button x:Name="Hoagies" Content="" HorizontalAlignment="Left" Margin="152.297,246,0,0" VerticalAlignment="Top" Width="161" Height="78" Click="Hoagies_Click" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="Image8.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Hoagies" HorizontalAlignment="Left" Margin="206.297,329,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.501,0.278" Foreground="#FFB61E1E" FontWeight="Bold" Grid.Column="1"/>
+        <Button Content="Next" HorizontalAlignment="Left" Margin="341.333,25,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold" Click="Button_Click_1" Grid.Column="1"/>
+        <Button Content="Remove Item" HorizontalAlignment="Left" Margin="341.333,58,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold" Click="Remove_Click" Grid.Column="1"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="356,351,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="Button_Click_2" Grid.Column="1"/>
+
+    </Grid>
+</Window>
